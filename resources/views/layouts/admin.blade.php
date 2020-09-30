@@ -11,6 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -23,6 +26,25 @@
 </head>
 <body>
 <div id="app">
+    <div class="flex">
+        <div class="w-64 bg-blue-600 h-screen">
+            <a href="{{ url('/home') }}" class="block bg-gray-900 p-3">
+                <span class="text-3xl block -mb-2 text-gray-100">Playground</span>
+                <span class="text-xs text-gray-300">Content Management System</span>
+            </a>
+            <div class="bg-blue-500">
+                <input type="search" class="block w-full px-2 py-2 appearance-none focus:outline-none bg-blue-700 focus:bg-blue-600 text-blue-100" placeholder="Search here ..">
+            </div>
+            <div>
+                <a href="{{ url('/home') }}" class="text-blue-100 block p-3 hover:bg-blue-500"><i class="fal fa-tachometer-alt mr-2 text-blue-200"></i> Dashboard</a>
+                <a href="{{ url('/users') }}" class="text-blue-100 block p-3 hover:bg-blue-500"><i class="fal fa-users mr-2 text-blue-200"></i>Users</a>
+                <a href="{{ url('/roles') }}" class="text-blue-100 block p-3 hover:bg-blue-500"><i class="fal fa-briefcase mr-2 text-blue-200"></i>Roles</a>
+            </div>
+        </div>
+        <div class="flex-1">
+            @yield('content')
+        </div>
+    </div>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,7 +97,7 @@
     </nav>
 
     <main class="py-4">
-        @yield('content')
+
     </main>
 </div>
 </body>
