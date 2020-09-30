@@ -1,0 +1,23 @@
+/* Custom SASS */
+
+.button {
+  background: #4299e1;
+  background: linear-gradient(90deg, #4299e1 0%, #63b3ed 100%);
+  padding: 8px 20px;
+  color: #EBF8FF;
+  border-radius: 0.125rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+}
+
+.button:hover {
+  background: #61b1ec;
+  background: linear-gradient(90deg, #61b1ec 0%, #90cdf4 100%);
+  color: #EBF8FF;
+}
+
+.button:focus {
+  outline: 0;
+}

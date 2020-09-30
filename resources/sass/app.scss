@@ -1,0 +1,18 @@
+/* Custom SASS */
+.button {
+    background: rgb(66,153,225);
+    background: linear-gradient(90deg, rgba(66,153,225,1) 0%, rgba(99,179,237,1) 100%);
+    padding: 8px 20px;
+    color: #EBF8FF;
+    border-radius: 0.125rem;
+    appearance: none;
+    outline: 0;
+    &:hover {
+        background: rgb(97,177,236);
+        background: linear-gradient(90deg, rgba(97,177,236,1) 0%, rgba(144,205,244,1) 100%);
+        color: #EBF8FF;
+    }
+    &:focus {
+        outline: 0;
+    }
+}
